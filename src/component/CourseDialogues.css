@@ -1,0 +1,93 @@
+html, body {
+  background-image: url('./background.jpg'); /* set the background image */
+  background-repeat: repeat; /* prevent the image from repeating */
+  background-size: cover; /* make the image cover the entire viewport */
+
+}
+.dialog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* reduced gap from 20px to 10px */
+  }
+  
+  .dialog-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5px; /* reduced gap from 20px to 10px */
+  }
+  
+  .dialog {
+    width: 250px;
+    height: 220px; /* increased height from 180px to 300px */
+    background-color: #6c5878;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .dialog-title {
+    margin-top: 0;
+    position: relative;
+  }
+  
+  .dialog-title::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 2px;
+    background-color: gold;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dialog-btn {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dialog-btn:hover {
+    background-color: #23527c;
+  }
+  
+  .image-container {
+    width: 100%;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .dialog-container .dialog a,
+  .dialog-container .dialog p,
+  .dialog-container .dialog h3 {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .dialog-container {
+      flex-direction: column;
+    }
+  
+    .dialog {
+      width: 100%;
+      margin: 40px auto;
+    }
+  }
